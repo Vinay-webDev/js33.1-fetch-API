@@ -76,9 +76,11 @@ console.log("--------------------------------------------"); */
 
 const users = fetch("https://jsonplaceholder.typicode.com");
 ///
-console.log(users);
+///console.log(users);
 
-
+users.then(response => {
+    console.log(response);
+});
 
 
 
