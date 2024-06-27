@@ -74,12 +74,15 @@ myPromise2.then(value => {
 console.log("--------------------------------------------"); */
 //----pending--------//
 
-const users = fetch("https://jsonplaceholder.typicode.com");
+//const users = fetch("https://jsonplaceholder.typicode.com");
 ///
 ///console.log(users);
-
-users.then(response => {
-    console.log(response);
+// to get json
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(response => {
+    return response.json();
+}).then(data => {
+    console.log(data);
 });
 
 
