@@ -1,7 +1,6 @@
 // promise
 // 3 state: fullfilled, rejected, pending;
-
-
+/*
 const myPromise = new Promise((resolve, reject) => {
     const error = false;
     if (!error) {
@@ -44,6 +43,48 @@ myPromise1.then(value => {
 }).catch(error => {
     console.error(error);
 });
+*/
+//----real reason why need async or await------///
+const myPromise2 = new Promise((resolve, reject)=> {
+    const error = false;
+    if(!error) {
+        resolve("yes! resolved the Promise!");
+    }
+    else {
+        reject("no! rejected the Promise!");
+    }
+})
+
+const myPromise3 = new Promise((resolve, reject)=> {
+    setInterval(function() {
+        resolve("yes! the Promise is resolved!");
+    }, 3000);
+});
+
+
+
+myPromise3.then(value=> {
+    console.log(value);
+});
+
+myPromise2.then(value => {
+    console.log(value);
+});
+console.log("--------------------------------------------");
+//----pending--------//
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
