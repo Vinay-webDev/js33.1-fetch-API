@@ -84,8 +84,17 @@ fetch("https://jsonplaceholder.typicode.com/users")
 }).then(data => {
     console.log(data);
 });
-
-
+// we can't just take this data which is not globally available*****
+// working with data
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(response => {
+    return response.json();
+})
+.then(data => {
+    data.forEach(user => {
+        console.log(user);
+    })
+});
 
 
 
