@@ -45,6 +45,7 @@ myPromise1.then(value => {
 });
 */
 //----real reason why need async or await------///
+/*
 const myPromise2 = new Promise((resolve, reject)=> {
     const error = false;
     if(!error) {
@@ -69,11 +70,13 @@ myPromise3.then(value=> {
 
 myPromise2.then(value => {
     console.log(value);
-});
-console.log("--------------------------------------------");
+}); 
+console.log("--------------------------------------------"); */
 //----pending--------//
 
-
+const users = fetch("https://jsonplaceholder.typicode.com");
+///
+console.log(users);
 
 
 
